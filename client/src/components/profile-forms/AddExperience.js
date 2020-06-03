@@ -15,15 +15,12 @@ const AddExperience = ({ addExperience, history }) => {
     description: '',
   });
 
-  const [toDateDisabled, toggleDisabled] = useState(false);
+  //const [toDateDisabled, toggleDisabled] = useState(false);
 
   const { company, title, location, from, to, current, description } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const onSubmit = (e) => e.preventDefault();
-  addExperience(formData, history);
 
   return (
     <Fragment>
